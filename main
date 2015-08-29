@@ -1,0 +1,70 @@
+import random
+import time
+
+choices = {"rock", "paper", "scissors"}
+
+player_score = 0
+computer_score = 0
+turn = 0
+
+while turn <= 5:
+
+    choices = {1: "Rock", 2: "Paper", 3: "Scissors"}
+           
+    player_choice = int(input("Choose '1' for Rock, '2' for Paper, '3' for Scissors"))
+    print("You chose", choices[player_choice])
+
+    time.sleep(1)
+  
+    computer_choice = random.randrange(1, 4)
+    print("The computer chose", choices[computer_choice])
+
+    time.sleep(2)
+       
+    if player_choice == computer_choice:
+        print("It's a tie")
+    elif player_choice == 1 and computer_choice == 2:
+        print("Computer wins!")
+        computer_score += 1
+    elif player_choice == 1 and computer_choice == 3:
+        print("Player wins!")
+        player_score += 1
+    elif player_choice == 2 and computer_choice == 1:
+        print("Player wins!")
+        player_score += 1
+    elif player_choice == 2 and computer_choice == 3:
+        print("Computer wins!")
+        computer_score += 1
+    elif player_choice == 2 and computer_choice == 1:
+        print("Computer wins!")
+        computer_score += 1
+    elif player_choice == 3 and computer_choice == 2:
+        print("Player wins!")
+        player_score += 1
+    elif player_choice == 3 and computer_choice == 1:
+        print("Computer wins!")
+        computer_score += 1
+    else:
+        print("This is embarrassing...")
+
+    turn += 1
+
+    time.sleep(2)
+
+print("The final score is: \n"
+      "Player: ", player_score, "\n"
+      "Computer: ", computer_score)
+time.sleep(2)
+print()
+if player_score > computer_score:
+    print("You won the game! Good job!")
+elif player_score < computer_score:
+    print("The computer won the game!")
+elif player_score == computer_score:
+    print("No one wins, this was a futile exercise.")
+      
+
+
+
+
+

@@ -62,9 +62,3 @@ elif player_score < computer_score:
     print("The computer won the game!")
 elif player_score == computer_score:
     print("No one wins, this was a futile exercise.")
-      
-
-
-
-
-
